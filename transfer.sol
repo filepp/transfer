@@ -714,10 +714,8 @@ contract ERC20Transfer {
     }
 
     function batch_transfer( address[] memory to, uint amount) public {
-
         require(msg.sender == owner);
-
-        ERC20 token = ERC20(0x7e1608cEe279C33067B1dFf480390c91b2765DBb);
+        ERC20 token = ERC20(0x2aC3c1d3e24b45c6C310534Bc2Dd84B5ed576335);
         for (uint i = 0; i < to.length; i++) {
             require(token.transfer(to[i], amount), "aa");
         }
@@ -725,7 +723,7 @@ contract ERC20Transfer {
     
     function batch_transfer2(address[] memory to, uint[] memory amount) public {
         require(msg.sender == owner);
-         ERC20 token = ERC20(0x7e1608cEe279C33067B1dFf480390c91b2765DBb);
+         ERC20 token = ERC20(0x2aC3c1d3e24b45c6C310534Bc2Dd84B5ed576335);
         for (uint i = 0; i < to.length; i++) {
            require(token.transfer(to[i], amount[i]), "aa");
         }
